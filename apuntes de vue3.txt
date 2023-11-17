@@ -1,0 +1,17 @@
+instalar node
+
+instalar vue
+npm i -g  @vue/cli
+
+podes usar vue de 2 formas 
+
+una x cdn y otro por el cliente 
+nosotros usaremos el cliente
+
+cliente vue y hay 2 mas.
+
+usando cliente vue 
+
+crear proyecto
+vue create nombreproyecto
+
