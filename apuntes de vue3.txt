@@ -15,3 +15,22 @@ usando cliente vue
 crear proyecto
 vue create nombreproyecto
 
+
+componentes
+
+se crean dentro de src/componentes
+la estructura de componente es
+
+<template>
+  <h1> Titulo</h1>
+  <NombreDelComponente />  // asi se usan los componentes que importamos.
+</template>
+
+<script lang="ts" setup>  // ts si es typescript o js si es javascript
+  import NombreDelComponente from './helloword/src/components/NombreDelComponente.vue
+</script>
+
+<style>
+  // aca va el css
+</style>
+
