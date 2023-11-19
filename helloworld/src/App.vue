@@ -7,7 +7,7 @@
   <ExampleVFor />
   <ClassBind />
   <StyleBind />
-  <StyleBind_vVon />
+  <ModelForm />
 </template>
 
 <script lang="ts" setup>
@@ -18,7 +18,7 @@ import ExampleSelective from './components/ExampleSelective.vue';
 import ExampleVFor from './components/ExampleV-For.vue';
 import ClassBind from './components/ClassBind.vue';
 import StyleBind from './components/styleBind.vue';
-import StyleBind_vVon from './components/styleBind_v-von.vue';
+import ModelForm from './components/ModelForm.vue';
 </script>
 
 <style>
