@@ -34,3 +34,23 @@ la estructura de componente es
   // aca va el css
 </style>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ciclo de vida
+
+
