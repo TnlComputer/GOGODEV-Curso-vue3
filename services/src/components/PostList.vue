@@ -1,5 +1,5 @@
 <template>
-  <div>Listado de Post</div>
+  <div>Listado de Post <button class='btn btn-primary'>Estilado con bootstrap</button></div>
   <ul class='post-list'>
     <li v-for='post in posts' :key='post.id'>{{ post.title }}</li>
   </ul>
@@ -52,18 +52,23 @@ onMounted(async () => {
 })
 </script> 
 
-<style scoped>
+<style scoped lang='scss'>
 .post-list {
   width: 95vw;
   height: 75px;
   padding: 20px;
   text-align: left;
   list-style-type: none;
-}
 
-.post-list li {
-  padding: 20px;
-  width: 100%;
-  border: 1px solid #ccc;
+  li {
+    padding: 20px;
+    width: 100%;
+    border: 1px solid #ccc;
+    color: $red;
+  }
+
+  li:hover {
+    background-color: darken(#000000, 20%);
+  }
 }
-</style>
+</style> 
