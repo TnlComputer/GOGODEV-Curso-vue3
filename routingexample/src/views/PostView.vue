@@ -6,10 +6,10 @@
 import { onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
 
-let postId = ref('')
+let postId = ref('');
 
 onMounted(() => {
-  const route = useRoute()
-  postId.value = route.params.id
+  const route = useRoute();
+  postId.value = route.params.id;
 })
 </script>

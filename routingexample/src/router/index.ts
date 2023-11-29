@@ -6,6 +6,7 @@ import ServicesView from '../views/ServicesView.vue'
 import BlogView from '../views/BlogView.vue'
 import PostView from '../views/PostView.vue'
 
+
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
