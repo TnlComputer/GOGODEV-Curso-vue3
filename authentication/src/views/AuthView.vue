@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Ref, ref } from 'vue'
+import { ref } from 'vue'
 
 let email = ref('')
 let password = ref('')

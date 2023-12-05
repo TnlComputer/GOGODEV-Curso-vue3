@@ -6,6 +6,15 @@
   <router-view />
 </template>
 
+<script lang='ts' setup>
+
+// Datos Api  prueba authentications
+// url = "https://hfp69ilv.directus.app/auth/login"
+// user = "testuser@gogodev.net"
+// pass = "12345678"
+
+</script>
+
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
