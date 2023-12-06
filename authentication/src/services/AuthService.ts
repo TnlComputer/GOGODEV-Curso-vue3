@@ -21,10 +21,15 @@ class AuthService {
   async login(email:string, password:string): Promise<boolean>{
     try {
       const res = await fetch('https://hfp69ilv.directus.app/auth/login', {
+        
+      // const res = await fetch('https://376usy84.directus.app/auth/login', {
+        
         method: 'POST',
         headers: {
+          // 'Access-Control-Allow-Origin': '*',
+          // 'Access-Control-Allow-Methods': 'POST, GET,'
           'Accept': 'application/json',
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           email: email,

@@ -33,3 +33,8 @@ const authUser = async () => {
 }
 </script>
 
+<style>
+.container {
+  width: 400px;
+}
+</style>
