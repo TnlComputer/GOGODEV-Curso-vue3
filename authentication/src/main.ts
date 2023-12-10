@@ -5,6 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import { initializeApp } from "firebase/app";
 import { Amplify } from 'aws-amplify';
 import awsExports from './aws-exports';
+import Emitter from 'tiny-emitter';
+
 import "bootstrap/dist/js/bootstrap.js"
 
 Amplify.configure(awsExports)
@@ -22,6 +24,10 @@ const firebaseConfig = {
 // Initialize Firebase
 initializeApp(firebaseConfig);
 
+const app = createApp(App);
+
+app.config.globalProperties.$msalInstance = {}
+app.config.globalProperties.$emitter = new Emitter.TinyEmitter()
 
 
-createApp(App).use(router).mount('#app')
+app.use(router).mount('#app')

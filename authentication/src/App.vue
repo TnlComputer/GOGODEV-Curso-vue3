@@ -4,7 +4,8 @@
     <router-link to="/auth">Access</router-link> |
     <router-link to="/firebase">Firebase</router-link> |
     <router-link to="/social">Social</router-link> |
-    <router-link to="/aws">AWS</router-link>
+    <router-link to="/aws">AWS</router-link> |
+    <router-link to="/azure">Azure</router-link>
   </nav>
   <router-view />
 </template>
