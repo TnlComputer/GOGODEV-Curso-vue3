@@ -3,7 +3,11 @@ import App from './App.vue'
 import router from './router'
 import "bootstrap/dist/css/bootstrap.min.css"
 import { initializeApp } from "firebase/app";
+import { Amplify } from 'aws-amplify';
+import awsExports from './aws-exports';
 import "bootstrap/dist/js/bootstrap.js"
+
+Amplify.configure(awsExports)
 
 const firebaseConfig = {
   apiKey: "AIzaSyCy38F_lArHAh_aJV_l4x0bn9dJ_AgIhQI",
@@ -17,4 +21,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 initializeApp(firebaseConfig);
+
+
+
 createApp(App).use(router).mount('#app')

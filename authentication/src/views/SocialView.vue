@@ -23,6 +23,7 @@ const loginGoogle = () => {
     .then((result) => {
       const credential = GoogleAuthProvider.credentialFromResult(result)
       const token = credential?.accessToken;
+      console.log(token)
       alert('Login Correcto!')
     })
     .catch((error) => {
@@ -34,6 +35,7 @@ const loginFacebook = () => {
     .then((result) => {
       const credential = FacebookAuthProvider.credentialFromResult(result)
       const token = credential?.accessToken;
+      console.log(token)
       alert('Login Correcto!')
     })
     .catch((error) => {
@@ -45,6 +47,7 @@ const loginTwitter = () => {
     .then((result) => {
       const credential = TwitterAuthProvider.credentialFromResult(result)
       const token = credential?.accessToken;
+      console.log(token)
       alert('Login Correcto!')
     })
     .catch((error) => {
@@ -58,6 +61,7 @@ const loginGithub = () => {
     .then((result) => {
       const credential = GithubAuthProvider.credentialFromResult(result)
       const token = credential?.accessToken;
+      console.log(token)
       alert('Login Correcto!')
     })
     .catch((error) => {
