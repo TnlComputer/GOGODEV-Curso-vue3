@@ -26,11 +26,21 @@ const authUser = async () => {
   const auth = new AuthService()
   const success = await auth.login(email.value, password.value)
   if (success) {
+    // $cookies.set('auth', success.access_token) )
     alert('Exitos!')
   } else {
     alert('Login incorrecto')
   }
 }
+
+// const takeInfoFromUser = () => {
+//   const token = $cookies.get('auth')
+// }
+
+// const getUserInfo = () => {
+//   const token = $session.get('auth')
+// }
+
 </script>
 
 <style>

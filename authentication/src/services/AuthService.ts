@@ -44,6 +44,9 @@ class AuthService {
       }
 
       this.jwt.value = response.data.access_token
+      $session.start()
+      $session.set('auth', response.data.access_token)
+      // $cookies.set('auth', response.data.access_token)
       return true
 
     }catch (error) {

@@ -5,7 +5,7 @@
 
 
 // options API
-<!-- <script lang="ts">
+<script lang="ts">
 import { PublicClientApplication } from '@azure/msal-browser'
 import { defineComponent } from "vue";
 import AzureService from '@/services/AzureService'
@@ -35,7 +35,7 @@ export default defineComponent({
     }
   }
 })
-</script> -->
+</script>
 
 // composition api
 // <!-- <script lang = "ts" >
@@ -70,7 +70,7 @@ export default defineComponent({
 <!-- </script> -->
 
 // composition setup
-<script lang = "ts" setup>
+<!-- <script lang = "ts" setup>
 import { PublicClientApplication } from '@azure/msal-browser'
 import { onMounted } from "vue";
 import AzureService from '@/services/AzureService'
@@ -90,4 +90,4 @@ const login = async () => {
     })
 }
 </script>
-
+ -->

@@ -32,11 +32,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'aws',
     component: AwsView
   },
-  {
-    path: '/azure',
-    name: 'azure',
-    component: AzureView
-  },
+  // {
+  //   path: '/azure',
+  //   name: 'azure',
+  //   component: AzureView
+  // },
 ]
 
 const router = createRouter({
