@@ -60,8 +60,8 @@ const useAuth = defineStore('auth', {
       const rawResponse = await fetch(uri, {
         method: 'GET',
         headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
+          'Content-Type': 'Application/json',
+          'Accept': 'Application/json',
           'Authorization': `Bearer ${this.token}`
         }
       })

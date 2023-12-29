@@ -17,6 +17,7 @@
     <button type="submit" class="btn btn-primary" @click.prevent='createUser'>Submit</button>
     <p style="color:red;">{{ feedback }} </p>
   </form>
+  <RouterLink :to="{ name: 'login' }">Login</RouterLink>
 </template>
 
 <script lang='ts' setup>

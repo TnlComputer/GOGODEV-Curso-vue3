@@ -6,8 +6,8 @@
         v-model="note">
     </div>
     <button type="submit" class="btn btn-primary" @click.prevent="sendNote">Submit</button>
-    <RouterLink :to="{ name: 'login' }">Login</RouterLink>
-    <p style='color:red'>{{ feedback }}</p>
+    <!-- <RouterLink :to="{ name: 'login' }">Login</RouterLink> -->
+    <p style="color:red">{{ feedback }}</p>
   </form>
 </template>
 
