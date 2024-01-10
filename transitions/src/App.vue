@@ -13,7 +13,11 @@ const show = ref(false)
 
 <template>
   <TransitionGroup name='list' tag='ul'>
-    <li v-for='note in  notes ' :key='note'>{{ note }}</li>
+    <!-- <li v-for='note in  notes ' :key='note'><v-icon name='bi-file-code-fill' />{{ note }}</li>
+    <li v-for='note in  notes ' :key='note'><v-icon name="fa-spinner" animation="spin-pulse" />{{ note }}</li> -->
+    <li v-for='note in  notes ' :key='note'><v-icon name="bi-arrow-right-square" scale='2' animation="pulse"
+        title='Aca el titulo que queremos' hover='true' />{{
+          note }}</li>
   </TransitionGroup>
   <input type="text" v-model='note'>
   <button @click='handdleNote'>Save note</button>
