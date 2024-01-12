@@ -18,7 +18,7 @@ const banco = () => {
 
 
 //composition api
-<template>
+<!-- <template>
   <div>
     <ChildComponent ref='percentageComponent'></ChildComponent>
     <button @click='banco'>Añadir cuanta bancaria</button>
@@ -40,4 +40,85 @@ export default defineComponent({
   }
 })
 
+</script> -->
+
+
+// Lazyload
+<!-- 
+<template>
+  <img v-lazy="{ src: lazyOptions.src, lifecycle: lazyOptions.lifecycle, delay: lazyOptions.delay }" />
+</template>
+
+<script lang='ts' setup>
+import { ref, VNode } from 'vue';
+const lazyOptions = ref({
+  src: 'https://picsum.photos/1280/800',
+  delay: 500,
+  lifecycle: {
+    loading: (el: VNode) => {
+      console.log('Cargando imagen', el)
+    },
+    error: (el: VNode) => {
+      console.log('Error Cargando imagen', el)
+    },
+    loaded: (el: VNode) => {
+      console.log('Imagen cargada', el)
+    }
+  }
+})
 </script>
+
+<style>
+img[lazy=loading] {
+  background-color: blue;
+  width: 500px;
+}
+
+img[lazy=loaded] {
+  background-color: aqua;
+}
+
+img[lazy=error] {
+  background-color: red;
+}
+</style> -->
+
+
+// WEBCHUNK
+<template>
+  <img v-lazy="{ src: lazyOptions.src, lifecycle: lazyOptions.lifecycle, delay: lazyOptions.delay }" />
+</template>
+
+<script lang='ts' setup>
+import { ref, VNode } from 'vue';
+const lazyOptions = ref({
+  src: 'https://picsum.photos/1280/800',
+  delay: 500,
+  lifecycle: {
+    loading: (el: VNode) => {
+      console.log('Cargando imagen', el)
+    },
+    error: (el: VNode) => {
+      console.log('Error Cargando imagen', el)
+    },
+    loaded: (el: VNode) => {
+      console.log('Imagen cargada', el)
+    }
+  }
+})
+</script>
+
+<style>
+img[lazy=loading] {
+  background-color: blue;
+  width: 500px;
+}
+
+img[lazy=loaded] {
+  background-color: aqua;
+}
+
+img[lazy=error] {
+  background-color: red;
+}
+</style>
