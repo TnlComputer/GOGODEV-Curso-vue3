@@ -73,7 +73,7 @@ const note = ref('')
 watchEffect(() => alert("Se ha modificado el valor: " + note.value)) -->
 
 // watcher script setup con watch
-<!-- <template>
+<template>
   <h3>Notas:</h3>
   <input type="text" v-model='note'>
   <button>Añadir</button>
@@ -82,7 +82,7 @@ watchEffect(() => alert("Se ha modificado el valor: " + note.value)) -->
 <script lang='ts' setup>
 import { ref, watch } from 'vue'
 const note = ref('')
-watch(note, () => alert("Se ha modificado el valor: " + note.value)) -->
+watch(note, () => alert("Se ha modificado el valor: " + note.value))
 
 
 </script>
