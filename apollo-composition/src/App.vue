@@ -1,43 +1,53 @@
 <template>
-  <h3>Notifications</h3>
-  <ul>
-    <li v-for="(comment, index) of comments" :key="index">
-      <b>{{ comment.name }}:</b> {{ comment.text }}
-    </li>
+  <h1>Comments</h1>
+  <div v-if="$apollo.queries.comments.loading">
+    <h3>Louding...</h3>
+  </div>
+  <ul v-else>
+    <li v-for="(comment, index) in comments" :key="index">{{ comment.text }}</li>
   </ul>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, watch } from 'vue';
-import { useSubscription } from '@vue/apollo-composable'
+import { defineComponent } from 'vue';
 import gql from 'graphql-tag';
 
 export default defineComponent({
-  setup() {
-    const comments = ref([])
-    const { result } = useSubscription(gql`
-    subscription Subscription {
-      commentCreated {
-        name
-        text
-      }
-    }
-    `,
-      () => ({
-
-      }))
-
-    watch(
-      result,
-      data => {
-        comments.value.push(data.commentCreated)
+  apollo: {
+    // comments: gql`
+    // query {
+    //  comments: getAllComments {
+    //     text
+    //   }
+    // }
+    // `
+    comments: {
+      query: gql`
+        query ($name: String!) {
+          comments: getCommentsFromUser(name: $name) {
+            text
+          }
+        }
+      `,
+      variables() {
+        return {
+          name: "User 1"
+        }
       },
-      {
-        lazy: true
-      }
-    )
-    return { comments }
-  }
-})
+      fetchPolicy: 'cache-and-network',
+      pollInterval: 5000
+    }
 
+  },
+  data() {
+    return {
+      comments: []
+    }
+
+  },
+  methods: {
+
+  }
+
+})
 </script>
