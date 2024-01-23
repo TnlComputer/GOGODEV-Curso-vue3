@@ -1,0 +1,15 @@
+VUE PWA
+*******
+
+
+para agregar a un proyecto el PWA hacemos
+
+npm i pwa
+
+********
+
+necesitamos intalar el  http-server
+
+npm i http-server -g
+
+

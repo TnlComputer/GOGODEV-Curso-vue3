@@ -1,0 +1,32 @@
+{
+  "name": "PWA Example" /*Splash screen name */,
+  "short_name": "PWA" /* App name*/,
+  "theme_color": "#3377dd" /* Main color - barra */,
+  "icons": [
+    {
+      "src": "./img/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/icons/android-chrome-maskable-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./img/icons/android-chrome-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": "." /* aca va la ruta en donde queremos que aparezca directamente nuestra aplicacion  ej "./login" */,
+  "display": "standalone" /* standalone app native - fullscreen abre a pantalla completa y saca la barra del celular - browser abre como si fuera un navegador con la barra de direcciones - minimal-ui abre como un standalone, pero con otros minimos agregados con el ir adelante o atras */,
+  "background_color": "#000000"
+}
