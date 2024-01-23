@@ -17,6 +17,8 @@ const wsLink = new WebSocketLink({
 
 })
 
+const cache = new InMemoryCache()
+
 const link = split(
   ({query}) => {
     const definition = getMainDefinition(query)
@@ -28,7 +30,6 @@ const link = split(
   httpLink
 )
 
-const cache = new InMemoryCache()
 const apolloClient = new ApolloClient({
   link: link,
   cache
