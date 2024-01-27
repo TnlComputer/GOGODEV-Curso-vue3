@@ -25,14 +25,10 @@ const count = signal(0)
 </script> -->
 
 // reactive - reactive viene con el paquete de vue
-<template>
+<!-- <template>
   <h3> Contador {{ obj.count }}</h3>
   <button @click='$event => obj.count++'>Increment</button>
   <button @click='$event => obj.count = 0'>Reset</button>
-
-  // plugin y variable glovales
-  <h3>{{ $count() }}</h3>
-  <button @click='event => $saySomething()'>Say Something</button>
 </template>
 
 <script lang="ts" setup>
@@ -42,7 +38,6 @@ const obj = reactive({
   count: 0
 })
 
-
 // const count = ref({
 //   value: 0
 // })
@@ -50,8 +45,16 @@ const obj = reactive({
 // count.value = {
 //   value: 5
 // }
+</script> -->
 
 
+<!-- plugin y variable glovales -->
+<template>
+  <h3>{{ $count() }}</h3>
+  <button @click="$event => $saySomething()">Say Something</button>
+</template>
+
+<script lang="ts" setup>
 
 </script>
 
