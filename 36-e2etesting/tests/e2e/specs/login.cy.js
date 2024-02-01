@@ -6,20 +6,17 @@ describe('Login Test Feature', () => {
     cy.url().should('eq', 'http://localhost:8080/login');
   });
   it('user with wrong credentials can not pass', () => {
-    cy.visit('/login');
-    cy.get('#email').type('user@email.com');
-    cy.get('#password').type('0569734');
-    cy.get('button').click();
+    cy.login('user@email.com', 'user@email.com');
+    // cy.get('#email').type('user@email.com');
+    // cy.get('#password').type('0569734');
+    // cy.get('button').click();
     cy.contains('p', 'Wrong email or password');
     cy.visit('/');
     cy.url().should('eq', 'http://localhost:8080/login');
   });
 
   it('user can successfully login', () => {
-    cy.visit('/login');
-    cy.get('#email').type('admin@admin.com');
-    cy.get('#password').type('12345678');
-    cy.get('button').click();
+    cy.login('admin@admin.com', '12345678');
     cy.url().should('eq', 'http://localhost:8080/');
   });
 });
