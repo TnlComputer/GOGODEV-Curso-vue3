@@ -1,0 +1,37 @@
+VITE VUE
+*******
+
+crear un proyecto nuevo
+yarn create vite 41-vite-vue-app --template vue-ts
+
+para generar el node-module ejecutamos
+yarn o bien npm install
+
+para ejecutar el serve
+yarn dev 
+
+para ejecutar el build
+yarn build
+
+para instalar un paquete
+yarn add vue-router
+como no arma la estructura, podemos usar snipper personalizados.
+creamos la carpeta dentro de src, el archivo dentro de la carpeta router, 
+si el vue es con ts la extension es ts, si es js, de acuerdo a eso el snippet 
+se usan degun la extension
+
+
+
+alias de src es el @
+en vite no tenemos estos atajos
+eso se configura en el vite.config.js
+para tenerlo agregamos estas lineas
+
+import path from 'path';
+
+debajo de plugins: ....,
+resolve: {
+  '@' : path.resolve(__dirname, './src'),
+}
+
+

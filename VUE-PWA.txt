@@ -1,15 +1,4 @@
-VUE PWA
+VITE VUE
 *******
 
-
-para agregar a un proyecto el PWA hacemos
-
-npm i pwa
-
-********
-
-necesitamos intalar el  http-server
-
-npm i http-server -g
-
-
+yarn create vite 41-vite-vue-app --template vue-ts
