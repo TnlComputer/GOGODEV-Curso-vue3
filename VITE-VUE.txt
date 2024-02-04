@@ -34,4 +34,18 @@ resolve: {
   '@' : path.resolve(__dirname, './src'),
 }
 
+VITEST
 
+yarn create vite 42-vitestexample --template VUE
+
+para deicr donde esta el artivo de configuracion
+vitest.config.ts
+
+en el package.json tenemos que agregar las siguientes lineas
+"test": "vitest",
+"coverage": "vitest run --coverage"
+
+JEST
+yarn add --dev jest
+
+MOCHA
